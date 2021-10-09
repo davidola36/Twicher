@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    max-width: 100vw;
+    height: 80px;
+    background-color: lightgrey;
+    /* border-bottom: 1px dashed red; */
+    align-items: center;
+    padding: 0 24px;
+    /* margin-right: 23px; */
+    justify-content: space-between;
+}
+
+.header--link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header--link:not(:last-child) {
+    margin-right: 16px;
+}
+
+a.header--link:hover {
+    font-weight: 500;
+    color: rgba(41, 41, 238, 0.876);
+}
+
+#banner {
+    position: relative;
+    height: calc(100vh - 80px);
+    background-color: brown;
+    background: url('./assets/images/temple.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.banner--title {
+    position: relative;
+    color: #ffffff;
+    z-index: 1;
+    font-size: 40px;
+}
+
+.banner--arrow {
+    position: absolute;
+    right: 40px;
+    bottom: 50px;
+    height: 70px;
+    /* filter: brightness(0) saturate(100%) invert(0%) sepia(93%) saturate(0%) hue-rotate(234deg) brightness(96%) contrast(107%); */
+    animation: oscillate 2s infinite ease-in-out;
+}
+
+@keyframes oscillate {
+    0% {
+        bottom: 100px;
+    }
+
+    50% {
+        bottom: 30px;
+    }
+
+    100% {
+        bottom: 100px;
+    }
+}
+
